@@ -1,0 +1,26 @@
+* Log hole finder
+
+  Reads through logfile and prints lines with suspiciously large holes.
+
+  Has two strategies:
+
+*** Maxhole
+    print biggest hole in a given file
+
+*** Threshold
+    print all the holes larger than a given threshold
+
+  Usage:
+  #+begin_src
+USAGE:
+    holes [OPTIONS] <--maxhole|--threshold <THRESHOLD>>
+
+FLAGS:
+    -h, --help       Prints help information
+    -m, --maxhole
+    -V, --version    Prints version information
+
+OPTIONS:
+    -f, --file <FILE>              Sets a logfile to read from. [default: -]
+    -t, --threshold <THRESHOLD>    minimum hole length to report about (ms).
+  #+end_src
